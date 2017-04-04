@@ -20,14 +20,15 @@ public class leer {
 					System.out.println("Queda un intento:");
 				
 				salir=true;
-				System.out.println("Escribe un numero");
 				num=teclado.nextInt();
+				vuelta=0;
 
 			}
 			catch(java.util.InputMismatchException e){
 				vuelta++;
 				salir=false;
 				teclado=new Scanner(System.in);
+				System.out.println("Error: Escribe un numero");
 
 			}
 			finally{
@@ -37,6 +38,7 @@ public class leer {
 
 
 		} while(!salir&&vuelta<5);
+		
 		if(vuelta==4){
 			error=true;
 			System.exit(1);
@@ -60,14 +62,16 @@ public class leer {
 					System.out.println("Queda un intento:");
 				
 				salir=true;
-				System.out.println("Escribe un decimal");
+
 				num=teclado.nextDouble();
+				vuelta=0;
 
 			}
 			catch(java.util.InputMismatchException e){
 				vuelta++;
 				salir=false;
 				teclado=new Scanner(System.in);
+				System.out.println("Error: Escribe un decimal");
 
 			}
 			finally{
@@ -97,14 +101,16 @@ public class leer {
 					System.out.println("Queda un intento:");
 				
 				salir=true;
-				System.out.println("Escribe un booleano");
+				
 				num=teclado.nextBoolean();
+				vuelta=0;
 
 			}
 			catch(java.util.InputMismatchException e){
 				vuelta++;
 				salir=false;
 				teclado=new Scanner(System.in);
+				System.out.println("ERROR: Escribe un booleano");
 
 			}
 			finally{
